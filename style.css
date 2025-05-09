@@ -13,16 +13,16 @@
         position: absolute;
       }
       .navbar li {
-        height: auto;
-        width: 135.8px;
-        float: left;
-        text-align: center;
-        list-style: none;
-        font: normal bold 13px/1em Arial, Verdana, Helvetica;
-        padding: 0;
-        margin: 0;
-        background-color: #444444;
-      }
+            height: auto;
+            width: 135.8px; /* Conserver la largeur définie */
+            float: left;
+            text-align: center;
+            list-style: none;
+            font: normal bold 13px/1em Arial, Verdana, Helvetica;
+            padding: 0;
+            margin: 0;
+            background-color: #444444;
+        }
       .navbar a {
         padding: 18px 0;
         border-left: 1px solid #ccc9c9;
@@ -44,14 +44,18 @@
         display: block;
       }
       .navbar li ul li {
+        width: 135.8px;
         background-color: #444444;
       }
       .navbar li ul li a {
-        border-left: 1px solid #444444;
-        border-right: 1px solid #444444;
-        border-top: 1px solid #c9d4d8;
-        border-bottom: 1px solid #444444;
-      }
+            border-left: 1px solid #444444;
+            border-right: 1px solid #444444;
+            border-top: 1px solid #c9d4d8;
+            border-bottom: 1px solid #444444;
+            display: block;
+            width: 100%; /* Rendre le lien aussi large que le parent */
+            box-sizing: border-box; /* Inclure les bordures dans la largeur totale */
+        }
       .navbar li ul li a:hover {
         background-color: #a3a1a1;
       }
