@@ -12,13 +12,12 @@
     padding: 0;
     margin: 0;
     position: absolute;
-    right: 0;      /* Ajouté : aligne la navbar à droite */
-    left: auto;    /* Ajouté : empêche l’alignement à gauche */
+    left: 0; /* Aligne la barre à gauche */
 }
 
 .navbar li {
-    height: 50px; /* Fixe une hauteur uniforme pour tous les éléments */
-    width: 135.8px; /* Conserver la largeur définie */
+    height: 50px;
+    width: 135.8px;
     float: left;
     text-align: center;
     list-style: none;
@@ -29,9 +28,9 @@
 }
 
 .navbar a {
-    height: 50px; /* Fixe une hauteur uniforme pour les liens */
-    line-height: 50px; /* Centrer verticalement le texte */
-    padding: 0; /* Supprimer le padding pour éviter les conflits */
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
     border-left: 1px solid #ccc9c9;
     text-decoration: none;
     color: white;
@@ -51,24 +50,25 @@
 
 .navbar li:hover ul {
     display: block;
+    position: absolute;
 }
 
 .navbar li ul li {
-    height: 50px; /* Fixe une hauteur uniforme pour les sous-éléments */
+    height: 50px;
     width: 135.8px;
     background-color: #444444;
 }
 
 .navbar li ul li a {
-    height: 50px; /* Fixe une hauteur uniforme pour les liens des sous-menus */
-    line-height: 50px; /* Centrer verticalement le texte */
+    height: 50px;
+    line-height: 50px;
     border-left: 1px solid #444444;
     border-right: 1px solid #444444;
     border-top: 1px solid #c9d4d8;
     border-bottom: 1px solid #444444;
     display: block;
-    width: 100%; /* Rendre le lien aussi large que le parent */
-    box-sizing: border-box; /* Inclure les bordures dans la largeur totale */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .navbar li ul li a:hover {
