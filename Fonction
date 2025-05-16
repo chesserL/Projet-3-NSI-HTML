@@ -1,0 +1,55 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="new 1.css">
+</head>
+<body>
+<h1> I.Introduction </h1>
+<div>
+<p> Un programme peut être imagé par une boite à outil et le développeur comme un artisan :
+l’artisan doit construire quelque chose et a donc besoin de matériaux.
+Les variables sont les matériaux que l’artisan va manipuler pour construire son œuvre.
+Ce qu’il manque, ce sont les outils qui vont permettre d’assembler le tout : les fonctions.
+Qu’est ce qu’une fonction ?
+Une fonction est un sous-programme.
+
+Exemple d’application :
+Nous voulons savoir si une variable contient un nombre entier pair ou impair. On supposera que la 
+variable nombre existe déjà et qu’il est de type int.
+Programme Python :
+if val%2 == 0:
+  chaine = "pair"
+else:
+  chaine = "impair"
+
+Cette opération est à répéter pour chaque nombre à tester. Et si l'on fait ces mêmes opérations pour
+plusieurs nombres, nous perdons du temps à tout réécrire. Puis cela prend de la place dans la 
+console ou le fichier python.
+Pour pallier ce problème nous allons définir une fonction.
+    
+</p>  
+</div>
+<div>
+<h2> II –  Définition d’une fonction
+</h2> 
+</div>
+<div>
+<p> 
+Lorsque l’on veut créer une variable ou bien une fonction, on dit qu’on la définit.
+Pour définir une fonction, on utilise le mot-clé def.
+Une fonction se présente en 2 parties :
+• la signature (le nom de la fonction ainsi de ce qu’elle attend)
+• le corps de la fonction
+
+def parite(a):
+  if a%2 == 0:
+    chaine = "pair"
+  else:
+    chaine = "impair"
+</p>
+</div>
+
+</body>
+</html>
