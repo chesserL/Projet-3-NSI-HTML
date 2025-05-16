@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="new 1.css">
+</head>
+<body>
+<h1> I.Type booléen </h1>
+<div>
+<p> Le type booléen (boolean / bool) est un type ayant 2 états possibles : True/False
+Ce type offre de nombreuses possibilités de programmation, l'une d'elles est la condition.
+    
+</p>  
+</div>
+<div>
+<h2> II – Opérateurs de comparaison
+</h2> 
+</div>
+<div>
+<p> Les opérateurs de comparaisons permettent de comparer entre eux des objets de tous les types de 
+base. Le résultat d’un test de comparaison produit des valeurs booléennes.</p>
+
+
+<table border="1">
+    <tr>
+        <th>Opérateur</th>
+        <th>Opérateur sous python</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>=</td>
+        <td>==</td>
+        <td>Egal à</td>
+    </tr>
+    <tr>
+        <td> ≠ </td>
+        <td>!=</td>
+        <td>Différent de</td>
+    </tr>
+<tr>
+            <td>&gt;</td>
+            <td>&gt;</td>
+            <td>Supérieur à</td>
+        </tr>
+        <tr>
+            <td>≥</td>
+            <td>&gt;=</td>
+            <td>Supérieur ou égal à</td>
+        </tr>
+        <tr>
+            <td>&lt;</td>
+            <td>&lt;</td>
+            <td>Inférieur à</td>
+        </tr>
+        <tr>
+            <td>≤</td>
+            <td>&lt;=</td>
+            <td>Inférieur ou égal à</td>
+        </tr>
+        <tr>
+            <td>∈</td>
+            <td>in</td>
+            <td>Dans</td>
+        </tr>
+        <tr>
+            <td>∉</td>
+            <td>not in</td>
+            <td>Exclu</td></table>
+
+
+</div>
+<div>
+<h3>
+III. Instruction conditionnelle
+</h3>
+</div>
+<div>
+<p>
+La condition permet en fonction du résultat de celle-ci d'effectuer une portion de code python.
+Elle se caractérise par le mot-clé if sous python.
+En langage naturel on dirait :
+valeur prend la valeur 15
+si valeur vaut 16
+alors on affecte a chaine la chaine de caractère "La variable valeur vaut 16"
+En Python, cela nous donne le programme suivant:
+valeur = 15
+if valeur == 16:
+(Tabulation) chaine = "La variable valeur vaut 16"
+
+Complexifions ce bout de code, si valeur ne vaut pas 16 nous voudrions avoir une chaine l'indiquant
+aussi.
+On ajoute alors le mot-clé else qui va prendre tous les autres cas de figure.
+En langage naturel on dirait :
+valeur prend la valeur 15
+si valeur vaut 16
+alors chaine vaut "La variable valeur vaut 16"
+sinon
+chaine vaut "La variable ne vaut pas 16"
+
+En Python, cela nous donne le programme suivant :
+valeur = 15
+if valeur == 16 :
+  chaine = "La variable valeur vaut 16"
+else :
+  chaine = "La variable ne vaut pas 16"
+  
+Le mot-clé elif permet de donner au programme un comportement encore plus précis, il se traduit par sinon si.
+Il est placé toujours après un if ou elif et avant le else.
+En langage naturel on dirait :
+valeur prend la valeur 15
+si valeur vaut 16
+alors chaine vaut "La variable valeur vaut 16"
+sinon si valeur est inférieur à 16
+ alors chaine vaut "La variable est inférieur à 16"
+sinon
+chaine vaut "La variable ne vaut pas 16"
+
+En Python, cela nous donne le programme suivant :
+valeur = 15
+if valeur == 16 :
+  chaine = "La variable valeur vaut 16"
+elif valeur < 16 :
+  chaine = "La variable est inférieur à 16"
+else:
+  chaine = "La variable ne vaut pas 16"
+
+
+En résumé : les ‘:’ et espaces sont importants !!!!
+if condition :
+  instruction(s)
+elif condition :
+  instruction(s)
+else :
+  instruction(s)
+</p>
+</div>
+
+</body>
+</html>
