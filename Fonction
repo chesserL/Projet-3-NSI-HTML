@@ -48,6 +48,15 @@ def parite(a):
     chaine = "pair"
   else:
     chaine = "impair"
+  print(chaine)
+Ex:
+>>> parite(32)
+   pair <------- reponse
+
+Mots-clés :
+print : Afficher
+return : Recuperer
+Return permet l'arret d'une fonction.
 </p>
 </div>
 
