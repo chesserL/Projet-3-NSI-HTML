@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dictionnaires</title>
+<link rel="stylesheet" href="new 1.css"> 
+</head>
+<body>
+<div> <h1> Dictionnaires </h1> </div>
+<div id="">
+<h1>Dictionnaires</h1>
+</div>
+<div id="Introduction"><h2>I. Introduction</h2></div>
+<div><p>Afin de stocker des informations dans une seule et même variable, nous utilisons communément le
+n-upplet ou le tableau.<br><br>Par exemple :<br><code>&nbsp;&nbsp;&nbsp;&nbsp;t = (‘Dupond’, ‘Alice’, 171, 16)<br><br></p></code></div>
+  <div><p>Ce n-uplet semble stocker des informations sur une personne. Le problème vient du type
+d’information contenue dans cette structure qui n’est pas indiqué. On peut facilement deviner qu’il
+s’agit d’un nom, d’un prénom, d’une taille et d’un âge. Mais sans la confirmation du développeur
+du code cela n’est que supposition. De plus, l’accès aux éléments se fait par numéro de colonne et
+non par type d’information.
+</p></div>
+<div id="Définition"><h2>II. Définition</h2></div>
+<div><p>A la différence d’un n-uplet, le dictionnaire permet d’associer à chaque valeur une clé (unique).
+Cette clé fonctionne comme un indice, en effet lorsque l’on voudra accéder à une valeur du
+dictionnaire il faudra l’appeler par sa clé (Et non par sa position).<br>De plus la clé peut être une chaîne de caractère (str) ou un entier (int)<br><br>Même exemple :<br>Voici ce que cela peut donner lorsque l’on reprend l’exemple du dessus avec un dictionnaire.<br><br>
+<code>&nbsp;d = {'nom': 'Dupond', 'prenom': 'Alice', 'age': 16, 'taille': 171}<br><br>
+</code>Ici chaque valeur correspond à une clé. Et donc, la structure correspond mieux au stockage de ce
+type de donnée.</p></div>
+<div id="Découverte du type dict"><h2>III. Découverte du type dict</h2></div>
+<div><p>La création d’un dictionnaire peut se faire de 3 manières différentes.<br><br><code># Création d'un dictionnaire vide :<br>d = dict()<br>d2 = {}<br># Création d'un dictionnaire avec données :<br>d3 = {"nom": "Dupont", "prenom": "Alice", "age": 16, "taille": 171}<br><br></code>
+L’accès aux données se fait par la clé qui lui est associée. La modification quant à elle se fait par l’accès de la donnée suivie de la nouvelle valeur.<br><br>
+<code># Accès à la donnée :<br>>>> d3 = ["nom"]<br>"Dupont"<br># Modification :<br>>>> d3["nom"] = "Timoleon"<br><br></code>Pour ajouter un élément il suffit d’appeler le dictionnaire suivit de la clé associée (nouvelle), puis
+d’y affecter la nouvelle valeur.<br><br><code>>>> d3 = ["classe"] = "première"<br>>>> d3<br>{"nom": "Timoleon", "prenom": "Alice", "age": "16", "taille": 171, "classe": "première"}<br><br></code>
+Le parcours d’un dictionnaire est possible à l’aide d’une boucle for (le for permet de parcourir les
+clés du dictionnaire).<br><br><code>d3 = **{"nom": "Timoleon", "prenom": "Alice", "age": "16", "taille": 171, "classe": "première"}**<br>for c in d3:<br>&nbsp;&nbsp;&nbsp;&nbsp;print("La clé", c, "est associée à la valeur", d3[c])<br><br></code>
+Il existe des méthodes associées aux dictionnaires :<br><br><code># Récupération des clés :<br>d3.keys()<br># Récupération des valeurs :<br>d3.values()<br># Récupération des items :<br>d3.items()</code></p></div>
+  <div><p>Ces fonctions renvoient un élément de type <class dict_keys>, <class dict_values>, <class
+dict_items> difficilement manipulable. Il est donc conseillé de changer ce type par le type list
+(tableau python).</p></div>
+</body>
+</html>
