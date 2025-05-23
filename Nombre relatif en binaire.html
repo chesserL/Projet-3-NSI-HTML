@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title> Représentation d’un entier relatif </title>
+  <link rel="stylesheet" href="new 1.css"> 
+</head>
+<body>
+
+  <div> 
+    <h1> Représentation d’un entier relatif </h1> 
+  </div>
+
+  <div id="Présentation">
+    <h2>I.Présentation :</h2>
+    <p>
+Nous le savons, un entier naturel (nombre positif et sans virgule) peut s’écrire sous différentes
+bases (2 10 16). Et pour passer d’une base à l’autre il existe différentes méthodes (Voir cours
+représentation des entiers naturels)
+Présentation des entiers relatifs : <br>
+Les entiers relatifs sont des entiers (nombres sans virgule) qui peuvent être positif ou négatif.
+5, 15, 0, -5, -15 sont des nombres relatif.
+Nous en avons une représentation en base 10, grâce au signe - mais qu’en est t’il en base 2 ? 
+    </p>  
+  </div>
+
+  <div id="Représentation des entiers relatifs en base 2">
+    <h2> II.Représentation des entiers relatifs en base 2 </h2>
+    <p>
+La représentation en binaire doit garantir deux choses : <br>
+L’addition de deux nombres opposés doit être égale à 0 (-2 + 2 ⇒ 0) <br>
+A chaque nombre une seule et unique représentation doit lui être associée <br>
+    </p>
+<div id="Méthode">
+    <h2> III.Méthode</h2>
+    <p>
+Utilisation du complément à deux : <br>
+La méthode du complément à deux permet de donner à chaque nombre relatif une
+représentation binaire qui lui est associée (en fonction du nombre de bits associés). <br>
+Par exemple avec 3 bits : <br> 
+    </p>
+
+    <table border="1">
+      <<tr>
+        <th>Représentation binaire</th>
+        <th>Représentation “naturelles” </th>
+        <th>Représentation relatives</th>
+      <tr>
+        <td>111 </td>
+        <td>7</td>
+        <td>-1</td>
+      </tr>
+      
+      <tr>
+        <td>110 </td>
+        <td>6</td>
+        <td>-2</td>
+      </tr>
+      
+      <tr>
+        <td>101 </td>
+        <td>5</td>
+        <td>-3</td>
+      </tr>
+      <tr>
+        <td>100 </td>
+        <td>4</td>
+        <td>-4</td>
+      </tr>
+      
+      <tr>
+        <td>011 </td>
+        <td>3</td>
+        <td>3</td>
+      </tr>
+      
+      <tr>
+        <td>010 </td>
+        <td>2</td>
+        <td>2</td>
+      </tr>
+      
+      <tr>
+        <td>001 </td>
+        <td>1</td>
+        <td>1</td>
+      </tr>
+      
+      <tr>
+        <td>000 </td>
+        <td>0</td>
+        <td>0</td>
+      </tr>
+      
+    </table>
+
+    <p>
+Ici pour une représentation sur 3 bits il est donc possible de représenter les nombres allant
+de -4 à 3 <br>
+Pour obtenir la représentation d’un nombre négatif il faut :<br>
+Choisir un nombre négatif (-3)<br>
+Prendre sa valeur absolue (3 ⇒ 011)<br>
+Inverser tout les bits (100)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Il s’agit d’une opération non bit à bit (rappel expression booléenne)<br>
+On ajoute 1 au résultat (100 + 1 ⇒ 101) <br>
+Voici la représentation de -3 sur 3 bits ⇒ 101 <br>
+Si l’on veut la représentation de -3 sur 5 bits par exemple il faut : <br>
+Coder 3 sur 5 bits : 00011 <br>
+Inverser tout les bits : 11100 <br>
+Ajouter 1 : 11101 <br>
+Voici -3 sur 5 bits <br>
+    </p>
+
+</body>
+</html>
