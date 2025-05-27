@@ -20,20 +20,20 @@ Voici un algorithme python le faisant :
 </div>
 <div>
 <code>
-def select_mini(tab,ind):
-&nbsp;&nbsp;&nbsp;&nbsp;    mini = tab [ind]
-&nbsp;&nbsp;&nbsp;&nbsp;   for j in range(ind+1,len(tab)):
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       if tab[j]&lt;mini:
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            mini=tab[j]
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            ind=j
-&nbsp;&nbsp;&nbsp;&nbsp;    return ind
+def select_mini(tab,ind): <br>
+&nbsp;&nbsp;&nbsp;&nbsp;    mini = tab [ind] <br>
+&nbsp;&nbsp;&nbsp;&nbsp;   for j in range(ind+1,len(tab)): <br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       if tab[j]&lt;mini: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            mini=tab[j] <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            ind=j <br>
+&nbsp;&nbsp;&nbsp;&nbsp;    return ind <br>
     
 
-def tri_par_selection(tab):
-&nbsp;&nbsp;&nbsp;&nbsp;    for i in range(len(tab)-1):
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       indice = select_mini(tab,i)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       tab[i],tab[indice]= tab[indice],tab[i]
-&nbsp;&nbsp;&nbsp;&nbsp;    return tab 
+def tri_par_selection(tab): <br>
+&nbsp;&nbsp;&nbsp;&nbsp;    for i in range(len(tab)-1): <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       indice = select_mini(tab,i) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       tab[i],tab[indice]= tab[indice],tab[i] <br>
+&nbsp;&nbsp;&nbsp;&nbsp;    return tab <br>
 </code>
 </div>
 <div id="Tri par insertion">
@@ -41,24 +41,24 @@ def tri_par_selection(tab):
 </div>
 <div>
 <p> 
-Cette méthode de tri consiste à décaler successivement le 2ème élément avant le premier s'il est plus petit, puis à placer le 3ème élément vis-à-vis des 2 premiers éléments, etc...
-Voici un algorithme python le faisant :
+Cette méthode de tri consiste à décaler successivement le 2ème élément avant le premier s'il est plus petit, puis à placer le 3ème élément vis-à-vis des 2 premiers éléments, etc... <br>
+Voici un algorithme python le faisant : 
 </p>  
 </div>
 <div>
 <code>
-def decalage_pour_tri_insertion(tab,i):
- &nbsp;&nbsp;&nbsp;&nbsp;   v=tab[i]
- &nbsp;&nbsp;&nbsp;&nbsp;   while i > 0 and tab[i-1] > v:
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       tab[i]=tab[i-1]
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      i-=1
-  &nbsp;&nbsp;&nbsp;&nbsp;  tab[i]=v   
+def decalage_pour_tri_insertion(tab,i): <br>
+ &nbsp;&nbsp;&nbsp;&nbsp;   v=tab[i] <br>
+ &nbsp;&nbsp;&nbsp;&nbsp;   while i > 0 and tab[i-1] > v: <br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       tab[i]=tab[i-1] <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      i-=1 <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;  tab[i]=v   <br>
     
     
-def tri_par_insertion(tab):
-&nbsp;&nbsp;&nbsp;&nbsp;    for i in range(1,len(tab)):
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      decalage_pour_tri_insertion(tab,i)
- &nbsp;&nbsp;&nbsp;&nbsp;   return tab
+def tri_par_insertion(tab): <br>
+&nbsp;&nbsp;&nbsp;&nbsp;    for i in range(1,len(tab)): <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      decalage_pour_tri_insertion(tab,i) <br>
+ &nbsp;&nbsp;&nbsp;&nbsp;   return tab <br>
 </code>
 </div>
 </div>
