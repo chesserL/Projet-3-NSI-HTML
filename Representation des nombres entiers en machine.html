@@ -97,8 +97,38 @@ Comment trouver la représentation en base deux d'un entier naturel donné en ba
     2/2 = 1, reste 0 <br>
     1/2 = 0, reste 1 <br>
     On s'arrête car on arrive à 0. <br>
-    On a donc 11 en base 10 qui donne 1011 en base 2
+    On a donc 11 en base 10 qui donne 1011 en base 2 <br>
+
+    -> Méthode du tableau :
+    On prend les puissances de 2 jusqu'à celles la plus proche du nombre à représenter en restant en-dessous.
+    Si on peut soustraire la puissance de 2 au nombre, on écrit 1 dans le tableau , sinon 0
+
+    Exemple avec 49 :
+    
   </p>
+<div>
+  <table border="1">
+      <tr>
+        <th>32 ( 2^5 )</th>
+        <th>16</th>
+        <th> 8 </th>
+        <th>4</th>
+        <th>2</th>
+        <th>1</th>
+      </tr>
+      <tr>
+        <td>1 ( 49 - 32 possible )</td>
+        <td>1 ( 17 - 16 possible )</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+
+      </tr>
+      
+      
+    </table>
+</div>
   <h3>
 Comment représenter des informations complexes 
 </h3>
