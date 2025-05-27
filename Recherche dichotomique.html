@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> Recherche dichotomique </title>
+<link rel="stylesheet" href="new 1.css">
+</head>
+<body>
+<div>
+<h1> Recherche dichotomique </h1>
+</div>
+  <div>
+ <h2> Explication </h2>
+ </div>
+<div>
+<p> 
+C'est une méthode de recherche d'un nombre basé sur le principe de " la moitié de la moitié ". Par exemple, si on cherche un nombre entre 1 et 100, on va dire 50. Si c'est plus, on va dire 25, si c'est moins 75, et ainsi de suite jusqu'à trouver le bon nombre.
+</p>  
+</div>
+<div>
+<h2> Code python </h2>
+ </div>
+<div>
+<code>
+def recherche_dichotomique(tab,el): <br>
+&nbsp;&nbsp;&nbsp;&nbsp;   deb=0 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;    fin=len(tab)-1 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;    while deb<=fin: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        milieu=(fin+deb)//2 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        if tab[milieu]==el: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            return True <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       elif tab[milieu]>el: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            fin=milieu-1 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        else: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            deb=milieu+1 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;    return False <br>
+    
+
+</code>
+</div>
+
+
+</body>
+</html>
