@@ -28,10 +28,100 @@ problèmes.<br><br>
 La technique la plus basique pour résoudre ce type de problème d'optimisation consiste à énumérer de
 façon exhaustive toutes les solutions possibles, puis à choisir la meilleure. Cette approche par force
 brute, impose souvent un coût en temps trop important pour être utilisée.<br><br>
+    • Les algorithmes gloutons<br>
+Un algorithme glouton est un algorithme qui suit le principe de faire, étape par étape, un choix
+optimum local.<br>
+    Au cours de la construction de la solution, l’algorithme résout une partie du problème puis se focalise
+ensuite sur le sous-problème restant à résoudre.<br>
+La méthode gloutonne consiste à choisir des solutions locales optimales d'un problème dans le but
+d'obtenir une solution optimale globale au problème.<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;• Le principal avantage des algorithmes gloutons est leur facilité de mise en œuvre.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;• Le principal défaut est qu'ils ne renvoient pas toujours la solution optimale.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;• Dans certaines situations dites canoniques, il arrive qu’ils renvoient non pas un optimum mais
+l’optimum d’un problème.<br><br>
+    
   </p>
 </div>
-
-
-  
+<div id="Le problème du rendu de monnaie"><h2>II. Le problème du rendu de monnaie</h2></div>
+<div>
+  <p>
+    Un achat dit en espèces se traduit par un échange de pièces et de billets. Dans la suite, les pièces désignent
+indifféremment les véritables pièces que les billets.<br>
+Supposons qu’un achat induise un rendu de 49 euros en considérant pour simplifier que les 'pièces' prennent
+les valeurs 1, 2, 5, 10, 20, 50, 100 euros. Quelles pièces peuvent être rendues ?<br><br>
+    • 49 = 4 × 10 + 1 × 5 + 2 × 2 soit 7 pièces au total
+ (Quatre pièces de 10 euros, 1 pièce de 5 euros et deux pièces de 2 euros.)<br>
+• ou 49 = 9 × 5 + 2 × 2 soit 11 pièces au total<br>
+• ou 49 = 9 × 5 + 4 × 1 soit 13 pièces au total<br>
+• ou 49 = 49 × 1 soit 49 pièces au total<br><br>
+    Le problème du rendu de monnaie consiste à déterminer la solution avec le nombre minimal de pièces.<br><br>
+    Rendre 49 euros avec un minimum de pièces est un problème d’optimisation. En pratique, tout individu met
+en œuvre un algorithme glouton.<br><br>
+    1. Il choisit d’abord la plus grandeur valeur de monnaie, parmi 1, 2, 5, 10, 20 contenue dans 49
+ euros. En l’occurrence, deux fois une pièce de 20 euros.<br>
+2. La somme de 9 euros restant à rendre, il choisit une pièce de 5 euros,<br>
+3. Puis deux pièces de 2 euros.<br><br>
+    Fonctionnement du rendu de monnaie dans un algorithme glouton : <br><br>
+    Système = {1 ; 2 ; 5 ; 10 ; 20 ; 50 ; 100}<br>
+    Valeur = 49 euros<br><br>
+  </p>
+</div>
+  <div>
+     
+    <table border="1">
+      <tr>
+        <th>Etapes</th>
+        <th>Choix de la 'pièce' du système monnétaire</th>
+        <th>Reste à rendre</th>
+      </tr>
+      <tr>
+        <td>Etape 1</td>
+        <td>20</td>
+        <td>49 - 20 = 29</td>
+      </tr>
+      
+      <tr>
+        <td>Etape 2</td>
+        <td>20</td>
+        <td>29 - 20 = 9</td>
+      </tr>
+      
+      <tr>
+        <td>Etape 3</td>
+        <td>5</td>
+        <td>9 - 5 = 4</td>
+      </tr>
+      
+      <tr>
+        <td>Etape 4</td>
+        <td>2</td>
+        <td>4 - 2 = 2</td>
+      </tr>
+      
+      <tr>
+        <td>Etape 5</td>
+        <td>2</td>
+        <td>2 - 2 = 0</td>
+      </tr>
+    </table>
+  </div>
+  <div>
+    <p>
+      49 = 20 + 20 + 5 + 2 + 2
+    </p>
+  </div>
+  <div>
+    <p>
+      Solution optimale et système canonique du rendu de monnaie :<br><br>
+      Cette stratégie gagnante pour la somme de 49 euros l’est-elle pour n’importe quelle somme à rendre ?<br><br>
+      • Un système canonique<br>
+○ On peut montrer que l'algorithme glouton du rendu de monnaie renvoie une solution optimale pour le système monétaire français : {1,2,5,10,20,50,100}<br>
+○ Pour cette raison, un tel système de monnaie est qualifié de canonique.<br><br>
+• Des systèmes non canoniques<br>
+○ D’autres systèmes ne sont pas canoniques. L’algorithme glouton ne répond alors pas de manière
+optimale.<br>
+○ Par exemple, avec le système {1,3,6,12,24,30}, l’algorithme glouton répond en proposant le rendu : 49 = 30 + 12 + 6 + 1 soit 4 pièces ; alors que la solution optimale est 49 = 2 × 24 + 1, soit 3 pièces. <br>
+    </p>
+  </div>
 </body>
 </html>
