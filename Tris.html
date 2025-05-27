@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> Tris </title>
+<link rel="stylesheet" href="new 1.css">
+</head>
+<body>
+<div>
+<h1> Tri de nombres dans l'ordre croissant </h1>
+</div>
+<h2> I. Méthode 1:Tri par sélection </h2>
+<div>
+<p> 
+Cette méthode de tri consiste à intervertir le nombre le plus petit avec celui en première place, puis de le faire pour la deuxième place, et ainsi de suite.
+Voici un algorithme python le faisant :
+</p>  
+</div>
+<div>
+<code>
+def select_mini(tab,ind):
+    mini = tab [ind]
+    for j in range(ind+1,len(tab)):
+        if tab[j]<mini:
+            mini=tab[j]
+            ind=j
+    return ind
+    
+
+def tri_par_selection(tab):
+    for i in range(len(tab)-1):
+        indice = select_mini(tab,i)
+        tab[i],tab[indice]= tab[indice],tab[i]
+    return tab 
+</code>
+</div>
+<div>
+<h2> II. Méthode 2:Tri par insertion
+</h2> 
+</div>
+<div>
+<p> 
+Cette méthode de tri consiste à décaler successivement le 2ème élément avant le premier s'il est plus petit, puis à placer le 3ème élément vis-à-vis des 2 premiers éléments, etc...
+Voici un algorithme python le faisant :
+</p>  
+</div>
+<div>
+<code>
+def decalage_pour_tri_insertion(tab,i):
+    v=tab[i]
+    while i > 0 and tab[i-1] > v:
+        tab[i]=tab[i-1]
+        i-=1
+    tab[i]=v   
+    
+    
+def tri_par_insertion(tab):
+    for i in range(1,len(tab)):
+        decalage_pour_tri_insertion(tab,i)
+    return tab
+</code>
+</div>
+</div>
+
+</body>
+</html>
