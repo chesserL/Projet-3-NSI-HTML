@@ -19,19 +19,19 @@ Voici un algorithme python le faisant :
 <div>
 <code>
 def select_mini(tab,ind):
-    mini = tab [ind]
-    for j in range(ind+1,len(tab)):
-        if tab[j]<mini:
-            mini=tab[j]
-            ind=j
-    return ind
+&nbsp;&nbsp;&nbsp;&nbsp;    mini = tab [ind]
+&nbsp;&nbsp;&nbsp;&nbsp;   for j in range(ind+1,len(tab)):
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       if tab[j]&lt;mini:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            mini=tab[j]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            ind=j
+&nbsp;&nbsp;&nbsp;&nbsp;    return ind
     
 
 def tri_par_selection(tab):
-    for i in range(len(tab)-1):
-        indice = select_mini(tab,i)
-        tab[i],tab[indice]= tab[indice],tab[i]
-    return tab 
+&nbsp;&nbsp;&nbsp;&nbsp;    for i in range(len(tab)-1):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       indice = select_mini(tab,i)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       tab[i],tab[indice]= tab[indice],tab[i]
+&nbsp;&nbsp;&nbsp;&nbsp;    return tab 
 </code>
 </div>
 <div>
@@ -47,17 +47,17 @@ Voici un algorithme python le faisant :
 <div>
 <code>
 def decalage_pour_tri_insertion(tab,i):
-    v=tab[i]
-    while i > 0 and tab[i-1] > v:
-        tab[i]=tab[i-1]
-        i-=1
-    tab[i]=v   
+ &nbsp;&nbsp;&nbsp;&nbsp;   v=tab[i]
+ &nbsp;&nbsp;&nbsp;&nbsp;   while i > 0 and tab[i-1] > v:
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       tab[i]=tab[i-1]
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      i-=1
+  &nbsp;&nbsp;&nbsp;&nbsp;  tab[i]=v   
     
     
 def tri_par_insertion(tab):
-    for i in range(1,len(tab)):
-        decalage_pour_tri_insertion(tab,i)
-    return tab
+&nbsp;&nbsp;&nbsp;&nbsp;    for i in range(1,len(tab)):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      decalage_pour_tri_insertion(tab,i)
+ &nbsp;&nbsp;&nbsp;&nbsp;   return tab
 </code>
 </div>
 </div>
