@@ -62,191 +62,51 @@ digit, littéralement chiffre binaire. Un bit a deux états stables.
         <th>Logique</th>
       </tr>
       <tr>
-        <td>x in t</td>
-        <td>Renvoie True si un élément de t est égal à x</td>
+        <td>0</td>
+        <td>Passif/Repos</td>
+        <td>Ouvert</td>
+        <td>Eteinte</td>
+        <td>Non</td>
+        <td>Faux</td>
+
       </tr>
       
       <tr>
-        <td>x not in t</td>
-        <td>Renvoie True si aucun élément de t n'est égal à x, False sinon</td>
-      </tr>
-      
-      <tr>
-        <td>len(t) </td>
-        <td>Renvoie le nombre d'éléments de t</td>
-      </tr>
-      
-      <tr>
-        <td>t == t1 </td>
-        <td> Renvoie True si t et t1 sont de même type, ont la même longueur, et ont des éléments égaux 2 à 2</td>
-      </tr>
-      
-      <tr>
-        <td>t[i]</td>
-        <td>Renvoie l'élément d'indice i de t</td>
-      </tr>
-      
-      <tr>
-        <td>t[i:j]</td>
-        <td>Renvoie une partie de t de l'indice i à j non inclus</td>
-      </tr>
-      
-      <tr>
-        <td>t.index(x)</td>
-        <td>Renvoie l'indice de la première apparition de x dans t</td>
-      </tr>
-      
-      <tr>
-        <td>t.count(x) </td>
-        <td>Renvoie le nombre d'apparitions de x dans t</td>
-      </tr>
-       
+        <td>1</td>
+        <td>Actif/Travail</td>
+        <td>Fermée </td>
+        <td>Allumée</td>
+        <td>Oui </td>
+        <td> Vrai</td>
+   
     </table>
     </div>
-
-  <div id="Comment stocker ces données ?">
-    <h2> II. Comment stocker ces données ?</h2>
-    <p>
-Une première option est l’utilisation de tableau (ou bien le type list en Python) : <br>
-En informatique, un tableau est une structure de données représentant une séquence finie
-d’éléments auxquels on peut accéder efficacement par leur indice, dans la séquence.
-En Python, les tableaux sont représentés par le type List.
-Pour définir un tableau, on utilise les crochets : <br>
-Pour créer un tableau vide, on écrit : <br>
-&nbsp;&nbsp;&nbsp;&nbsp; >>> tab = [ ] <br>
-&nbsp;&nbsp;&nbsp;&nbsp; On peut créer par extension un tableau avec des valeurs : <br>
->>> tab = [1, 2, 3, 4] <br>
-    </p>
-<div id="Comment accéder à ces données ?">
-    <h2>III. Comment accéder à ces données ?</h2>
-    <p>Les éléments d'un tableau peuvent être comparés à des éléments d'une séquence : chaque
-élément a une position précise dans le conteneur, comme nous l'avons vu pour les chaînes de
-caractères (String).
-On appelle cette position indice, c'est cet indice qui nous permet d'accéder à un élément en
-particulier. Le premier élément d'un tableau a pour indice 0. <br>
->>> tab = [1, 5, 7, 3, 2, 9] <br>
->>> tab[0] <br>
-1 <br>
->>> tab[4] <br>
-2 <br>
-Pour connaître le nombre total d’éléments dans un tableau, on utilise la fonction len : <br>
-&nbsp;&nbsp;&nbsp;&nbsp;>>> tab = [‘a’, ‘e’, ‘b’, ‘t’] <br>
-&nbsp;&nbsp;&nbsp;&nbsp;>>> len(tab) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;4 <br>
-On peut désigner une tranche en indiquant l'indice du premier élément, ainsi que celui du
-dernier non inclus : <br>
-&nbsp;&nbsp;&nbsp;&nbsp;>>> tab = [1, 5, 7, 3, 2, 9] <br>
-&nbsp;&nbsp;&nbsp;&nbsp;>>> tab[1:4] <br>
-&nbsp;&nbsp;&nbsp;&nbsp;[5, 7, 3] <br>
-      
-    </p>
-<div id="Parcours d’une séquence">
-    <h2>IV. Parcours d’une séquence</h2>
-    <p>Pour parcourir une séquence (un tableau par exemple), on utilise les boucles. Ce parcours peut se
-faire de la même manière que pour les chaînes de caractères.
-    </p>
-    <table border="1">
-      <tr>
-        <th>Parcours élément par élément</th>
-        <th>Parcours par les indices</th>
-      </tr>
-      <tr><td> >>>tab = [1, 3, 5, 8, 9]</td><td>>>> tab = [1, 3, 5, 8, 9]</td><td></td></tr>
-      <tr><td> >>>for el in tab :</td><td> >>> for ind in range(len( tab )):</td><td></td></tr>
-      <tr><td> &nbsp;&nbsp;&nbsp;&nbsp;print( el )</td><td>&nbsp;&nbsp;&nbsp;&nbsp;print( tab[ i ] )</td><td></td></tr>
-
-    </table>
-
-    <div id="Quelques propriétés">
-    <h2> V. Quelques propriétés</h2>
-    <p>
-Une structure comme un tableau peut être modifiable : on parle d'un objet mutable. <br>
-• Il est possible d’ajouter un élément en fin de séquence avec l’utilisation de la fonction append. <br>
->>> t = [ 1, 2 ] <br>
->>> t.append( 3 ) <br>
->>> print( t ) <br>
-[1, 2, 3] <br>
-• Il est possible de modifier un élément en particulier, on lui affecte une nouvelle valeur. <br>
->>> t = [ 1, 12, 3] <br>
->>> t[ 1 ] = 2 <br>
->>> print( t ) <br>
-[1, 2, 3] <br>
-• Il est préférable de ne stocker que des données de même type dans un tableau. <br>
-• Il peut-être passé comme paramètre d'une fonction. <br>
-    </p>
-
-    
-    <p> A retenir:</p>
-    <table border="1">
-      <tr>
-        <th>Opération</th>
-        <th>Résultat</th>
-      </tr>
-      <tr>
-        <td>x in t</td>
-        <td>Renvoie True si un élément de t est égal à x</td>
-      </tr>
-      
-      <tr>
-        <td>x not in t</td>
-        <td>Renvoie True si aucun élément de t n'est égal à x, False sinon</td>
-      </tr>
-      
-      <tr>
-        <td>len(t) </td>
-        <td>Renvoie le nombre d'éléments de t</td>
-      </tr>
-      
-      <tr>
-        <td>t == t1 </td>
-        <td> Renvoie True si t et t1 sont de même type, ont la même longueur, et ont des éléments égaux 2 à 2</td>
-      </tr>
-      
-      <tr>
-        <td>t[i]</td>
-        <td>Renvoie l'élément d'indice i de t</td>
-      </tr>
-      
-      <tr>
-        <td>t[i:j]</td>
-        <td>Renvoie une partie de t de l'indice i à j non inclus</td>
-      </tr>
-      
-      <tr>
-        <td>t.index(x)</td>
-        <td>Renvoie l'indice de la première apparition de x dans t</td>
-      </tr>
-      
-      <tr>
-        <td>t.count(x) </td>
-        <td>Renvoie le nombre d'apparitions de x dans t</td>
-      </tr>
-       <tr>
-        <td>s + t</td>
-        <td>Renvoie une nouvelle séquence qui correspond à la concaténation de s et de t (seulement si s et t ont le même type)</td>
-      </tr>
-       <tr>
-        <td>t.append(x) </td>
-        <td>Ajoute l'élément x à la fin du tableau t</td>
-      </tr>
-       <tr>
-        <td>t[i] = x </td>
-        <td>Modifie le tableau et affecte la valeur x à la case d'indice i</td>
-      </tr>
-       <tr>
-        <td>t.insert(i, x) </td>
-        <td> Insère l'élément x à la position de l'indice i</td>
-      </tr>
-       <tr>
-        <td>t.remove(x) </td>
-        <td>Supprime le premier élément dont la valeur est égale à x</td>
-      </tr>
-       <tr>
-        <td>t.pop() </td>
-        <td>Enlève du tableau l'élément qui se situe à la fin et renvoie sa valeur</td>
-      </tr>
-    </table>
-
-    
+<p>
+Ainsi, pour coder une information qui peut ne prendre que deux états stables, la numération 
+binaire est la plus adaptée.
+    </p>  
+<h3>
+Comment trouver la représentation en base deux d'un entier naturel donné en base dix
+</h3>
+  <p>
+    → Méthode des divisions successives : On divise par 2 le nombre initial, puis on divise le quotient par 2 , et ainsi de suite jusqu'à arriver à 0. Les restes ( 0 ou 1) sont mis bout à bout et forment, du dernier au premier reste, le nombre binaire.<br>
+    Exemple: <br>
+    11 en base 2 : <br>
+    11/2 = 5, reste 1 <br>
+    5/2 = 2, reste 1 <br>
+    2/2 = 1, reste 0 <br>
+    1/2 = 0, reste 1 <br>
+    On s'arrête car on arrive à 0. <br>
+    On a donc 11 en base 10 qui donne 1011 en base 2
+  </p>
+  <h3>
+Comment représenter des informations complexes 
+</h3>
+  <p>
+• Avec 1 bit, nous pouvons coder 2 informations. <br>
+• Avec 2 bits, nous pouvons coder 4 informations différentes (2²). <br>
+Si nous généralisons un peu : avec k bits, nous pouvons coder 2^k informations différentes. <br>
+  </p> 
 
 </body>
 </html>
