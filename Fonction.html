@@ -136,11 +136,12 @@ Exemple d’application :<br>
 Nous voulons savoir si une variable contient un nombre entier pair ou impair. On supposera que la 
 variable nombre existe déjà et qu’il est de type int.
 Programme Python : <br>
+ <code>
 if val%2 == 0: <br>
 &nbsp;&nbsp;&nbsp;&nbsp; chaine = "pair" <br>
 else: <br>
  &nbsp;&nbsp;&nbsp;&nbsp; chaine = "impair" <br>
-
+ </code>
 Cette opération est à répéter pour chaque nombre à tester. Et si l'on fait ces mêmes opérations pour
 plusieurs nombres, nous perdons du temps à tout réécrire. Puis cela prend de la place dans la 
 console ou le fichier python.
@@ -159,14 +160,15 @@ Pour définir une fonction, on utilise le mot-clé def.
 Une fonction se présente en 2 parties : <br>
 • la signature (le nom de la fonction ainsi de ce qu’elle attend) <br>
 • le corps de la fonction <br>
-
+<code>
 def parite(a): <br>
 &nbsp;&nbsp;&nbsp;&nbsp;if a%2 == 0: <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   chaine = "pair" <br>
 &nbsp;&nbsp;&nbsp;&nbsp;  else: <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    chaine = "impair" <br>
-&nbsp;&nbsp;&nbsp;&nbsp;  print(chaine) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;  print(chaine) <br></code>
 Ex: <br>
+ 
 >>> parite(32) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  pair <------- reponse <br>
 
